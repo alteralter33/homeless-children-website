@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="details">
+    <table>
+        <caption>
+            <div id="kidname"><h3>{{ kid.Name|capfirst }}</h3></div>
+        </caption>
+        <tr>
+            <td>{% if kid.Sex %}
+                <h4>Gender: </h4><p>{{ kid.Sex }}</p>
+                {% endif %}</td>
+            <td>{% if kid.Age %}
+                <h4>Age:</h4><p>{{ kid.Age }}</p>
+                {% endif %}</td>
+        </tr>
+        <tr>
+            <td>{% if kid.Height %}
+                <h4>Height:</h4> <p>{{ kid.Height }} cm</p>
+                {% endif %}</td>
+            <td>{% if kid.Weight %}
+                <h4>Weight:</h4> <p>{{ kid.Weight }} kg</p>
+                {% endif %}</td>
+        </tr>
+        <tr>
+            <td>{% if kid.Country %}
+                <h4>Country:</h4><p>{{ kid.Country }}</p>
+                {% endif %}</td>
+            <td>{% if kid.Nationality %}
+                <h4>Nationality:</h4> <p>{{ kid.Nationality }}</p>
+                {% endif %}</td>
+        </tr>
+        <tr>
+            <td>{% if kid.Missing_Since %}
+                <h4>Missing Since:</h4><p>{{ kid.Missing_Since }}</p>
+                {% endif %}</td>
+            <td>{% if kid.Missing_From %}
+                <h4>Missing From:</h4> <p>{{ kid.Missing_From }}</p>
+                {% endif %}</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

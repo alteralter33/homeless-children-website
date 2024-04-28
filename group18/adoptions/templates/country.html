@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="countrypage">
+    <h1>✦ Click on the names to see the details of missing children ✦</h1>
+{% for kid in kid %}
+    <li class="countrycontent">
+        <a href="{% url 'details' kid.id %}">
+            <h3>{{kid.Name}}</h3>
+        </a>
+    </li>
+{% endfor %}
+</div>
+
+{% endblock %}

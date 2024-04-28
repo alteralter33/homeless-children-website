@@ -1,0 +1,100 @@
+{% load static %}
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Group 18 Missing kid</title>
+    <link rel="stylesheet" id="ample-style-css" href="{% static 'pagestyle.css' %}" type="text/css" media="all">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+        $("#top").click(function(){
+        var t = $('html').offset().top;
+        $("html,body").animate({ scrollTop: t}, 500);
+        });
+
+        $("#back").click(function(){
+            window.history.go(-1)
+        });
+    });
+    </script>
+</head>
+
+<body>
+
+<!-- ////////////////////////////////////////////////// header start -->
+<header>
+    <div id="icon"></div>
+    <ul id="bar">
+        <li><a href="{% url 'home' %}">HOME</a></li>
+        <li><a href="https://www.utas.edu.au/">GET HELP</a></li>
+        <li><a href="https://www.w3school.com.cn/h.asp">THE ISSUES</a></li>
+        <li><a href="https://www.runoob.com/">OUR WORK</a></li>
+        <li><a href="https://www.shou.edu.cn/">ABOUT US</a></li>
+    </ul>
+    <div><a href="http://localhost:8000/admin">
+        <button id="login">
+            <span>LOG IN</span>
+        </button>
+        </a>
+    </div>
+</header>
+<!-- ////////////////////////////////////////////////// header end -->
+
+<!-- ////////////////////////////////////////////////// billboard start -->
+<div id="billboard"></div>
+
+<div class="description">
+    <p> Group18 Missing kids release specific information about the lost children on all major platforms, gather social forces, post missing people notices, and release information about the lost children nearby on all major apps. Our business covers many countries and regions all over the world. At the first time to obtain the clues about the lost children, the police will work together to find the way home for the lost children, for the lost children's families and lost children to provide meticulous help and thoughtful service.</p>
+</div>
+<!-- ////////////////////////////////////////////////// billboard end -->
+
+
+
+<!-- ////////////////////////////////////////////////// block start -->
+<div class="block">
+            {% block content %}
+            {% endblock %}
+</div>
+<!-- ////////////////////////////////////////////////// block end -->
+
+
+
+
+<!-- ////////////////////////////////////////////////// footer start -->
+<div>
+    <div class="bottom">
+        <button class="botbut" id="back">BACK</button>
+        <button class="botbut" id="top">TOP</button>
+    </div>
+</div>
+
+
+<footer id="foot">
+    <div class="cols" id="location">
+        <p>999 Hucheng Ring Road Lingang, Shanghai, China</p>
+        <p><span class="contact">☏ 1-800-843-5678</span>
+            <span class="contact">✉ group18@utas.edu.au</span></p>
+    </div>
+    <div class="cols" id="support">
+        <a href="#">FAQ</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Policies</a>
+    </div>
+    <div class="share">
+        <ul>
+            <li><a href="#"><img src="{% static 'img/share.png' %}"></a></li>
+            <li><a href="#"><img src="{% static 'img/chat.png' %}"></a></li>
+            <li><a href="#"><img src="{% static 'img/fb.png' %}"></a></li>
+            <li><a href="#"><img src="{% static 'img/in.png' %}"></a></li>
+        </ul>
+    </div>
+    <div class="cols" id="bottom">
+        <p id="group">Group18 Missing kids is a fictional brand created by KXO205 Group18 to search only for missing children. All the details and personnel associated with the lost child are also fictional. Any resemblance to a real person, place or person is purely coincidental. For all matters related to the loss, please consult the official website and the police.</p>
+        <p id="copyright">Copyright © 2020 KXO205 Group18 National Center for Missing & Exploited Children. All rights reserved.<p>
+    </div>
+</footer>
+<!-- ////////////////////////////////////////////////// footer end -->
+</body>
+
+</html>
